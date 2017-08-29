@@ -1,22 +1,21 @@
 Assignment 2 - Basics HTML and CSS
 ===
 
-Due Nov 7
-
-This assignment introduces you to the basics of HTML and CSS, two fundamentals that compose a website. You will learn to use different HTML element, and style them up with CSS.
+This assignment introduces you to the basics of HTML and CSS, two fundamentals that compose a website. 
+You will learn to use different HTML element, and style them with CSS.
 
 Assignment details
 ---
 
 Do the following to complete this assignment:
 
-1. Clone the [starting project code](https://github.com/cs4241-16b/A2-TheBasics). **DO NOT FORK THE REPO and DO NOT MAKE IT PUBLIC.** This repo contains:
+1. Fork the starting project code. **DO NOT MAKE IT PUBLIC.** This repo contains:
     * the server code, `server.js`
     * the `Procfile` that you need for Heroku deployment
     * A starting `index.html` file that you will edit as described below
     * A blank `style.css` file that you will use to style your own content
 2. Edit `index.html` to your liking, provided it contains:
-    * At least one of these:
+    * At least one of each of the following:
         * An [image](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
         * A [table](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
         * A [list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li)
@@ -33,18 +32,33 @@ Do the following to complete this assignment:
         * [Positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
         * [Font styling](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)
     * CSS Pseudo Classes
-4. Use a decent [color scheme](https://color.adobe.com/create/color-wheel/) to style your webpage
-5. Bonus if you make the page visually appealing, and/or use different fonts 
-3. Test your project on your local machine to make sure that when someone goes to your main page, it displays correctly.
-4. Deploy your project to Heroku.
-5. Ensure that your project has the proper naming scheme (`cs4241-a2-yourGitHubUsername`) so we can find it.
+4. Use a decent [color scheme](https://color.adobe.com/create/color-wheel/) to style your webpage.
+5. Test your project on your local machine to make sure that when someone goes to your main page, it displays correctly.
+6. Deploy your project to Heroku.
+7. Ensure that your project has the proper naming scheme (guide follows) so we can find it.
+8. Modify the Readme to the specification below.
+9. Create and submit a Pull Request to the original repo.
+
+Design/Usability Achievements could center around making the page visually appealing, typography, etc.   
+Technical Achievements could center around novel uses of CSS selectors, building content dynamically, etc.
+
+Naming and URL Scheme
+---
+
+You must use a consistent naming scheme for all projects in this course.
+If we can't find it, we can't grade it.
+
+By default Heroku assigns your application a random name.
+To change it, follow [this guide](https://devcenter.heroku.com/articles/renaming-apps).
+
+The name scheme should be `a2-yourGitHubUsername`.
 
 Resources
 ---
 
 A good resource for general HTML/CSS/Javascript is the [Mozilla Developer Network](https://developer.mozilla.org/en-US/). This contains all the references you need for front-end design.
 
-A good resource for font would the the [Google Font](https://fonts.google.com/) project, with hundreds of different fonts to choose from so that you don't have to stick with Comic Sans. Or Impact.
+A good resource for font would the [Google Font](https://fonts.google.com/) project, with hundreds of different fonts to choose from so that you don't have to stick with Comic Sans. Or Impact.
 
 If you want icons, look into [Font Awesome](http://fontawesome.io/).
 
@@ -57,3 +71,20 @@ Advanced Resources
 [UIKit](https://getuikit.com/) is another alternative to Bootstrap that you could look into. It is lighter than Bootstrap __and__ supports animation, if that's what you are into. 
 
 [Sass](http://sass-lang.com/) is an extension to CSS that makes maintaining/writing CSS easier and more fun. You basically write in Sass, and the complier will output a CSS file to use in production. 
+
+Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
+---
+
+Lane Harrison  
+http://aX-codementum.herokuapp.com
+
+This project shows ...
+
+## Technical Achievements
+- **Proved P=NP**: Using a combination of...
+- **Solved AI**: ...
+
+### Design Achievements
+- **Re-vamped Apple's Design Philosophy**: Shown in `style.css`, the code...
+
+
