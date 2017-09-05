@@ -42,6 +42,8 @@ Do the following to complete this assignment:
 Design/Usability Achievements could center around making the page visually appealing, typography, etc.   
 Technical Achievements could center around novel uses of CSS selectors, building content dynamically, etc.
 
+Note: Please do not push node_modules folder to git. (Do not remove it from .gitignore) If you are using an external library, please add the library in package.json. Heroku loads the library from there. 
+
 Naming and URL Scheme
 ---
 
