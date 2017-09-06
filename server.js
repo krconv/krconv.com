@@ -7,6 +7,7 @@ var url = require('url'),
 const app = express();
 app.use('/static/css/', express.static('public/static/css'));
 app.use('/static/js/', express.static('public/static/js'));
+app.use('/static/image/', express.static('public/static/image'));
 
 app.get('/page/*', function(req, res) {
   var file = __dirname + '/public' + req.path + '.html';

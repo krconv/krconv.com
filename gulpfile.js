@@ -6,7 +6,7 @@ gulp.task('sass', function () {
     gulp.src('style.scss')
         .pipe(sass())
         .pipe(gulp.dest(function (f) {
-            return 'public/css/';
+            return 'public/static/css/';
         }))
 });
 

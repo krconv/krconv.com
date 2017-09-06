@@ -58,6 +58,8 @@ main {
   align-items: center;
   padding: 10px;
   min-height: calc(100vh - 192px); }
+  main p {
+    font-size: 1.2rem; }
 
 div.page {
   width: 750px;
@@ -66,6 +68,54 @@ div.page {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
   div.page + div.page {
     margin-top: 15px; }
+
+.picture-frame {
+  overflow: hidden; }
+
+#about #profile-picture {
+  margin: 20px;
+  float: left;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px; }
+  #about #profile-picture > img {
+    width: 160px;
+    height: auto;
+    margin: -10px -10px; }
+
+#about #collage {
+  clear: both;
+  width: 100%;
+  height: 400px;
+  column-count: 3;
+  column-gap: 0; }
+  #about #collage img {
+    width: 100%; }
+  #about #collage .picture-frame:nth-child(1) {
+    height: 150px; }
+    #about #collage .picture-frame:nth-child(1) img {
+      margin-top: -75px; }
+  #about #collage .picture-frame:nth-child(2) {
+    height: 250px; }
+  #about #collage .picture-frame:nth-child(3) {
+    height: 215px; }
+    #about #collage .picture-frame:nth-child(3) img {
+      width: 130%; }
+  #about #collage .picture-frame:nth-child(4) {
+    height: 185px; }
+    #about #collage .picture-frame:nth-child(4) img {
+      margin-top: -35px;
+      margin-left: -15%;
+      width: 140%; }
+  #about #collage .picture-frame:nth-child(5) {
+    height: 160px; }
+  #about #collage .picture-frame:nth-child(6) {
+    height: 240px; }
+    #about #collage .picture-frame:nth-child(6) img {
+      margin-top: -30px; }
+  #about #collage > div {
+    display: flex;
+    flex-direction: column; }
 
 footer {
   position: sticky;
