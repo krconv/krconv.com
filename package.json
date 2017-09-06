@@ -6,8 +6,5 @@
   "private": true,
   "scripts": {
     "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.15.4"
   }
 }
