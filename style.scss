@@ -1,12 +1,25 @@
-$shadow-color: rgba(0, 0, 0, 0.3);
+$primary-color: #01579b;
+$primary-light-color: #4f83cc;
+$primary-dark-color: #002f6c;
+$text-primary-color: #ffffff;
+
+$secondary-color: #c62828;
+$secondary-light-color: #ff5f52;
+$secondary-dark-color: #8e0000;
+$text-secondary-color: #ffffff;
+
+$shadow-color: rgba(0, 0, 0, 0.5);
+
 html {
     height: 100%;
 }
+
 body {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     height: 100%;
     overflow-y: scroll;
+    background: $primary-dark-color;
 }
 
 header {
@@ -16,19 +29,19 @@ header {
     padding: 20px;
     z-index: 10;
     text-align: center;
-    border-bottom: 1px solid black;
-    background: white;
     box-shadow: 0 0 15px $shadow-color;
+    background: $primary-color;
+    color: $text-primary-color;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.6rem;
     font-weight: 100;
     margin: 0;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 200;
     margin: 5px;
 }
@@ -37,38 +50,61 @@ h3 {
     font-size:  1.7rem;
     margin-bottom: 5px;
     font-weight: 300;
+    padding: 3px 5px;
+    background: $secondary-dark-color;
+    color: $text-secondary-color;
+    box-shadow: 0 0 5px $shadow-color;
+}
+
+a {
+    &, &:visited {
+        color: $secondary-dark-color;
+    }
+
+    &:hover {
+        color: $secondary-color;
+        text-shadow: 0 0 50px $shadow-color;
+    }
 }
 
 nav {
-    border: 1px solid black;
     position: fixed;
     top: 10px;
     right: 50%;
-    margin-top: 100px;
+    margin-top: 110px;
     margin-right: 400px;
+    padding: 5px;
     display: flex;
     align-items: stretch;
     flex-direction: column;
-    box-shadow: 0 0 10px $shadow-color;
     z-index: 1;
+    box-shadow: 0 0 10px $shadow-color;
+    background: $secondary-color;
     
     > a {
-        color: black;
+        color: $text-secondary-color;
         padding: 10px;
-        margin: 0 5px;
         font-size: 1.7rem;
+
         text: {
             align: center;
             decoration: none;
         }
-        
-        &:hover {
-            text-shadow: 0 0 60px $shadow-color;   
-        }
-    }
 
-    > a + a {        
-        border-top: 1px solid black;
+        &:visited {
+            color: $text-secondary-color;
+        }
+
+        &:hover {
+            background: $secondary-light-color;
+            color: $text-secondary-color;
+            box-shadow: 0 0 3px $shadow-color;
+        }
+
+        &.active {
+            background: $secondary-dark-color;
+            box-shadow: 0 0 3px $shadow-color inset;
+        }
     }
 }
 
@@ -78,18 +114,28 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    min-height: calc(100vh - 192px);
+    min-height: calc(100vh - 191px);
 
-    p {
+    td, th, li, p {
         font-size: 1.2rem;
     }
+    
+    th {
+        font-weight: bolder;
+        padding: 5px;
+    }
+
+    td {
+        text-align: center;
+    }
+
 }
 
 div.page {
     width: 750px;
-    border: 1px solid black;
     padding: 15px;
     box-shadow: 0 0 10px $shadow-color;
+    background: white;
     
     + div.page {
         margin-top: 15px;
@@ -98,15 +144,17 @@ div.page {
 
 .picture-frame {
     overflow: hidden;
+    box-shadow: 0 0 7px $shadow-color;
 }
 
 #about {
-    #profile-picture {
+    .profile {
         margin: 20px;
         float: left;
         border-radius: 50%;
         height: 150px;
         width: 150px;
+        box-shadow: 0 0 10px $shadow-color;
 
         > img {
             width: 160px;
@@ -119,6 +167,7 @@ div.page {
         clear: both;
         width: 100%;
         height: 400px;
+        box-shadow: 0 0 10px $shadow-color;
         column: {
             count: 3;
             gap: 0;
@@ -129,6 +178,7 @@ div.page {
         }
 
         .picture-frame {
+            box-shadow: none;
             &:nth-child(1) {
                 height: 150px;
 
@@ -183,6 +233,7 @@ div.page {
 
 #projects {
     h3 {
+        margin: 20px -10px 5px;
         clear: both;
     }
 
@@ -191,12 +242,16 @@ div.page {
         margin: 5px;
     }
 
+
     .picture-frame {
         float: right;
         width: 40%;
+        margin-top: 20px;
 
         img {
             width: 100%;
+            height: 100%;
+            max-height: 300px;
         }
     }
 }
@@ -215,6 +270,14 @@ div.page {
                 margin: 5px;
             }
 
+            p {
+                font-size: 1.4rem;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
             & + .option {
                 border-left: 1px solid black;
             }
@@ -227,9 +290,11 @@ footer {
     position: -webkit-sticky;
     z-index: 10;
     bottom: 0;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
-    border-top: 1px solid black;
+    font-weight: 200;
     background: white;
     box-shadow: 0 0 15px $shadow-color;
+    background: $primary-color;
+    color: $text-primary-color;
 }
