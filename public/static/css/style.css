@@ -4,7 +4,8 @@ html {
 body {
   font-family: Calibri, 'Trebuchet MS', sans-serif;
   margin: 0;
-  height: 100%; }
+  height: 100%;
+  overflow-y: scroll; }
 
 header {
   position: sticky;
@@ -27,13 +28,18 @@ h2 {
   font-weight: 200;
   margin: 5px; }
 
+h3 {
+  font-size: 1.7rem;
+  margin-bottom: 5px;
+  font-weight: 300; }
+
 nav {
   border: 1px solid black;
   position: fixed;
   top: 10px;
   right: 50%;
   margin-top: 100px;
-  margin-right: 395px;
+  margin-right: 400px;
   display: flex;
   align-items: stretch;
   flex-direction: column;
@@ -64,7 +70,7 @@ main {
 div.page {
   width: 750px;
   border: 1px solid black;
-  padding: 10px;
+  padding: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
   div.page + div.page {
     margin-top: 15px; }
@@ -116,6 +122,31 @@ div.page {
   #about #collage > div {
     display: flex;
     flex-direction: column; }
+
+#projects h3 {
+  clear: both; }
+
+#projects time {
+  font-style: italic;
+  margin: 5px; }
+
+#projects .picture-frame {
+  float: right;
+  width: 40%; }
+  #projects .picture-frame img {
+    width: 100%; }
+
+#contact > div {
+  display: flex;
+  justify-content: center; }
+  #contact > div .option {
+    margin: 10px 0px;
+    padding: 10px 40px;
+    text-align: center; }
+    #contact > div .option h3 {
+      margin: 5px; }
+    #contact > div .option + .option {
+      border-left: 1px solid black; }
 
 footer {
   position: sticky;
