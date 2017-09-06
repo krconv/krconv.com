@@ -1,13 +1,13 @@
 var url = require('url'),
   express = require('express'),
+  favicon = require('serve-favicon'),
   path = require('path'),
   fs = require('fs'),
   port = process.env.PORT || 8080;
 
 const app = express();
-app.use('/static/css/', express.static('public/static/css'));
-app.use('/static/js/', express.static('public/static/js'));
-app.use('/static/image/', express.static('public/static/image'));
+app.use('/static/', express.static('public/static'));
+app.use(favicon(__dirname + '/public/static/favicon.ico')); 
 
 app.get('/page/*', function(req, res) {
   var file = __dirname + '/public' + req.path + '.html';
