@@ -2,7 +2,7 @@ var url = require('url'),
   express = require('express'),
   path = require('path'),
   fs = require('fs'),
-  port = 80;
+  port = process.env.PORT || 8080;
 
 const app = express();
 app.use('/static/css/', express.static('public/static/css'));
