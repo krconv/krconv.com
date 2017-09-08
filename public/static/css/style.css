@@ -1,6 +1,6 @@
 html {
   font-size: 20px;
-  font-family: Calibri, 'Trebuchet MS', sans-serif; }
+  font-family: 'Open Sans', Calibri, sans-serif; }
   @media screen and (max-width: 800px) {
     html {
       font-size: 16px; } }
@@ -16,10 +16,16 @@ html {
       font-size: 3rem;
       font-weight: 100;
       margin: 0; }
+      @media screen and (max-width: 800px) {
+        html body h1 {
+          font-size: 2.4rem; } }
     html body h2 {
       font-size: 2.5rem;
       font-weight: 200;
       margin: 5px; }
+      @media screen and (max-width: 800px) {
+        html body h2 {
+          font-size: 2rem; } }
     html body h3 {
       font-size: 1.5rem;
       margin-bottom: 5px;
@@ -61,13 +67,14 @@ html {
     html body footer {
       bottom: 0;
       padding: 5px;
-      font-weight: 200; }
+      font-weight: 200;
+      font-size: 0.65rem; }
     html body nav {
       z-index: 1;
       position: fixed;
       top: 10px;
       right: 50%;
-      margin-top: 114px;
+      margin-top: 122px;
       margin-right: 400px;
       padding: 5px;
       display: flex;
@@ -77,7 +84,7 @@ html {
       background: #c62828; }
       html body nav > a {
         padding: 10px;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         text-align: center;
         text-decoration: none; }
         html body nav > a, html body nav > a:hover, html body nav > a:visited {
@@ -103,7 +110,7 @@ html {
     html body main {
       position: relative;
       padding: 10px;
-      min-height: calc(100vh - 207px);
+      min-height: calc(100vh - 196px);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -113,16 +120,20 @@ html {
         padding: 15px;
         background: #ffffff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+        html body main .page p,
+        html body main .page td, html body main .page th,
+        html body main .page li {
+          font-family: Times, serif; }
         @media screen and (max-width: 800px) {
           html body main .page {
-            width: 70%;
+            width: 85%;
             margin: 10px; } }
         @media screen and (min-width: 800px) and (max-width: 1150px) {
           html body main .page {
             width: 500px; } }
       @media screen and (max-width: 800px) {
         html body main {
-          min-height: calc(100vh - 253px); } }
+          min-height: calc(100vh - 230px); } }
       html body main #about .profile {
         margin: 20px;
         float: left;
@@ -235,14 +246,18 @@ html {
         justify-content: center; }
         html body main #contact > div .option {
           margin: 10px 0px;
-          padding: 10px 40px;
+          padding: 10px 30px;
           text-align: center; }
           html body main #contact > div .option h3 {
             margin: 5px; }
-          html body main #contact > div .option p {
-            font-size: 1.1rem; }
-            html body main #contact > div .option p a {
-              text-decoration: none; }
+            @media screen and (max-width: 1150px) {
+              html body main #contact > div .option h3 {
+                margin: 5px 20%; } }
+          html body main #contact > div .option a {
+            display: block;
+            margin: 20px 0px;
+            text-decoration: none;
+            font-family: inherit; }
           html body main #contact > div .option + .option {
             border-left: 1px solid lightgray; }
             @media screen and (max-width: 1150px) {
@@ -251,6 +266,7 @@ html {
                 border-top: 1px solid lightgray; } }
           @media screen and (max-width: 1150px) {
             html body main #contact > div .option {
+              padding: 10px;
               margin: 0px 10px -10px; } }
         @media screen and (max-width: 1150px) {
           html body main #contact > div {
