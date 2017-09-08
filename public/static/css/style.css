@@ -217,6 +217,7 @@ html {
       html body main #projects .picture-frame {
         float: right;
         margin-top: 20px;
+        margin-left: 10px;
         max-width: 40%;
         max-height: 300px; }
         html body main #projects .picture-frame img {
