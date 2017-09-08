@@ -1,14 +1,17 @@
 {
-  "name": "lh-4241-simple-node",
-  "version": "0.1.0",
-  "description": "WPI CS 4241 Assignment 2",
+  "name": "krconv.com",
+  "version": "1.0",
+  "description": "Kodey Converse",
   "author": "Kodey Converse",
   "private": true,
-  "scripts": {
-    "start": "node server.js"
-  },
   "dependencies": {
     "express": "^4.15.4",
+    "pm2": "^2.6.1",
     "serve-favicon": "^2.4.3"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "start-cluster": "pm2 start server.js -i max -name=\"krconv.com\"",
+    "restart-cluster": "pm2 restart all"
   }
 }
