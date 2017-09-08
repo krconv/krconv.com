@@ -120,6 +120,9 @@ html {
         @media screen and (min-width: 800px) and (max-width: 1150px) {
           html body main .page {
             width: 500px; } }
+      @media screen and (max-width: 800px) {
+        html body main {
+          min-height: calc(100vh - 253px); } }
       html body main #about .profile {
         margin: 20px;
         float: left;

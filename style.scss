@@ -155,6 +155,9 @@ html {
                     width: 500px;
                 }
             }
+            @media screen and (max-width: $break-small) {
+                min-height: calc(100vh - 253px);
+            }
             /** Page Styles */
             #about {
                 .profile {
