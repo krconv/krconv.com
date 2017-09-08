@@ -12,6 +12,7 @@
   "scripts": {
     "start": "node server.js",
     "start-cluster": "pm2 start server.js -i max -- name=\"krconv.com\"",
-    "restart-cluster": "pm2 restart all"
+    "restart-cluster": "pm2 restart all",
+    "stop-cluster": "pm2 stop all"
   }
 }
