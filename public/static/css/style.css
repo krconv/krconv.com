@@ -96,7 +96,7 @@ html {
           top: unset;
           right: unset;
           flex-direction: row;
-          justify-content: space-around; } }
+          justify-content: center; } }
       @media screen and (min-width: 800px) and (max-width: 1150px) {
         html body nav {
           margin-right: 275px; } }
