@@ -3,7 +3,7 @@ var url = require('url'),
   favicon = require('serve-favicon'),
   path = require('path'),
   fs = require('fs'),
-  port = process.env.PORT || 8080;
+  port = process.env.PORT || 80;
 
 const app = express();
 app.use('/static/', express.static('public/static'));
