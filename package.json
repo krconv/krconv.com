@@ -1,6 +1,6 @@
 {
   "name": "krconv.com",
-  "version": "1.0",
+  "version": "0.1.0",
   "description": "Kodey Converse",
   "author": "Kodey Converse",
   "private": true,
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "start-cluster": "pm2 start server.js -i max -name=\"krconv.com\"",
+    "start-cluster": "pm2 start server.js -i max -- name=\"krconv.com\"",
     "restart-cluster": "pm2 restart all"
   }
 }
