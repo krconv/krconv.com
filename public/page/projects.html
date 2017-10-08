@@ -2,6 +2,38 @@
 <div class="page" id="projects">
     <h2>Projects</h2>
     <article>
+        <h3>Stodd C Minecraft Website</h3>
+        <a href="https://mc.krconv.com" target="_blank">mc.krconv.com</a>
+        <time datetime="2017-10">October 2017</time>
+        <p>
+            I created a web interface that allows students to use their WPI account to play on a Minecraft server I've built available
+            to all residents in Stoddard C. The goals that I want this server to achieve are:
+        </p>
+        <ul>
+            <li>Students can play without needing to buy the game.</li>
+            <li>Only a set of students are allowed to play.</li>
+            <li>Students can only play as one account; they shouldn't be able to log in as someone else.</li>
+        </ul>
+        <p>
+            This Node.js website serves two purposes. First, it is an interface that students can use to learn about the server
+            and register to play. Second, it provides a REST API which can be used by a program running on the Minecraft server
+            to check the status of a connecting user and either allow or disallow them entry.
+        </p>
+        <p>
+            The idea of letting a set of students come together and play on a server has been an on-going project that I've enjoyed
+            over the past year. Specifically with this website, I've been able to implement the following features.
+        </p>
+        <ul>
+            <li>WPI authentication. I tied the website in with Microsoft's OAuth API to authenticate users with their WPI account.</li>
+            <li>Server status checker. The website has a widget which shows the current status of the server and who's logged on.</li>
+            <li>Seperated logic. I used the middleware framework provided by ExpressJS to seperate authentication logic from the
+                    view logic.</li>
+            <li>Quick development. I was able to get the webserver up and running in one day.</li>
+            <li>Minecraft registration. Students can choose a username and update their password at anytime using a registration
+                    widget available on the site.</li>
+        </ul>
+    </article>
+    <article>
         <h3>krconv.com Project</h3>
         <time datetime="2017-09">September 2017</time>
         <p>
@@ -12,22 +44,22 @@
         </p>
         <p>
             A few things that I've been happy to have integrated into the site are:
-            <ul>
-                <li>A photo collage. While it's mostly hard-coded CSS values, I'm glad I could figure it out.</li>
-                <li>Mobile friendly. I'm glad that the site scales on phones because that is where most of my family will probably
-                    see it.</li>
-                <li>No white screens. I've tried a few times to implement a site where navigation doesn't result in the flicker
-                    of a white screen, and I think I finally figured out a solution that I like.</li>
-            </ul>
         </p>
+        <ul>
+            <li>A photo collage. While it's mostly hard-coded CSS values, I'm glad I could figure it out.</li>
+            <li>Mobile friendly. I'm glad that the site scales on phones because that is where most of my family will probably
+                see it.</li>
+            <li>No white screens. I've tried a few times to implement a site where navigation doesn't result in the flicker
+                of a white screen, and I think I finally figured out a solution that I like.</li>
+        </ul>
     </article>
     <article>
         <h3>LED Door Name Plates</h3>
         <time datetim="2017-06">Summer 2017</time>
         <div class="picture-frame"><img src="/static/image/project-sign.jpg"></div>
         <p>
-            I have an obsession for ECE (electrical and computer engineering) because it is a place for me to control objects in the
-            real world using computer science. This year I wanted to use some of the basic ECE knowledge I have recently
+            I have an interest in ECE (electrical and computer engineering) because it is a place for me to control objects in the
+            real world using computers. This year I wanted to use some of the basic ECE knowledge I have recently
             gained to create door decorations for my residents (I'm a Resident Advisor) which could be interacted with.
         </p>
         <p>
