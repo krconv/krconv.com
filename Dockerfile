@@ -1,15 +1,18 @@
-FROM node:8
-
+FROM node:12 as build
 WORKDIR /app
 
 # install dependencies
-COPY package*.json /app
-RUN npm install
+COPY package.json yarn.lock ./
+RUN yarn install
 
-# copy the project
-COPY . /app
+# build the project
+COPY . .
+RUN yarn run build
 
-ENV PORT=80
-EXPOSE $PORT
 
-CMD ["npm", "start"]
+# build the serving container
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
