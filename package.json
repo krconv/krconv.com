@@ -1,18 +1,31 @@
 {
-  "name": "krconv.com",
+  "name": "conve.rs",
   "version": "0.1.0",
-  "description": "Kodey Converse",
-  "author": "Kodey Converse",
+  "homepage": "https://kodey.conve.rs",
   "private": true,
   "dependencies": {
-    "express": "^4.15.4",
-    "pm2": "^2.6.1",
-    "serve-favicon": "^2.4.3"
+    "@material-ui/core": "^4.1.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "node server.js",
-    "start-cluster": "pm2 start server.js -i max -- name=\"krconv.com\"",
-    "restart-cluster": "pm2 restart all",
-    "stop-cluster": "pm2 stop all"
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
