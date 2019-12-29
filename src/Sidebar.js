@@ -76,7 +76,7 @@ export default function Sidebar() {
             </IconButton>
             <CopyToClipboardIconButton
               value="kodey@conve.rs"
-              tooltip="Email copied to clipboard!"
+              tooltip="Copied!"
               size="small"
             >
               <img src={MailIcon} alt="Mail" />
