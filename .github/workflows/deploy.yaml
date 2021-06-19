@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.3
+      - name: Deploy to HubSpot
+        uses: HubSpot/hubspot-cms-deploy-action@v1.4
+        with:
+          src_dir: src
+          dest_dir: ${{ secrets.HS_DEPLOY_DIR }}
+          portal_id: ${{ secrets.HS_PORTAL_ID }}
+          personal_access_key: ${{ secrets.HS_ACCESS_KEY }}
