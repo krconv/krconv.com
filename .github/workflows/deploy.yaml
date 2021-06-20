@@ -12,10 +12,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.3
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build
+        run: yarn run build
+      - name: CMS-ify
+        run: yarn run scripts:cmsify
       - name: Deploy to HubSpot
         uses: HubSpot/hubspot-cms-deploy-action@v1.4
         with:
-          src_dir: src
+          src_dir: build
           dest_dir: ${{ secrets.HS_DEPLOY_DIR }}
           portal_id: ${{ secrets.HS_PORTAL_ID }}
           personal_access_key: ${{ secrets.HS_ACCESS_KEY }}
